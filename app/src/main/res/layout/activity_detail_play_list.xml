@@ -27,33 +27,31 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/white_100"
+                android:orientation="vertical"
                 android:paddingHorizontal="@dimen/margin_16">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_detail_playlist_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
                     android:fontFamily="@font/fjalla_one"
+                    android:text="@string/emotional_well_being_healing_practices_for_children"
                     android:textAlignment="textStart"
                     android:textColor="@color/black_lite"
-                    android:textSize="24sp"
-                    android:layout_marginTop="14dp"
-                    android:text="@string/emotional_well_being_healing_practices_for_children"
-                    />
+                    android:textSize="24sp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_detail_playlist_subtitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
                     android:fontFamily="@font/noto_sans"
+                    android:text="@string/in_this_series_we_break_down_the_impact_of_displacement_instability_violence_and_trauma_in_children_and_offer_exercises_to_support_children_in_their_healing_journey"
                     android:textAlignment="textStart"
                     android:textColor="@color/black_super_lite"
-                    android:textSize="@dimen/txSize14"
-                    android:layout_marginTop="14dp"
-                    android:text="@string/in_this_series_we_break_down_the_impact_of_displacement_instability_violence_and_trauma_in_children_and_offer_exercises_to_support_children_in_their_healing_journey"
-                    />
+                    android:textSize="@dimen/txSize14" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -82,25 +80,23 @@
                 android:id="@+id/tv_video_series"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/noto_sans"
+                android:text="@string/_12_video_series"
                 android:textAlignment="textStart"
                 android:textColor="@color/black_ultra_lite"
                 android:textSize="12sp"
-                android:text="@string/_12_video_series"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/video_list_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_videos"
                 app:layout_constraintTop_toBottomOf="@+id/tv_video_series"
-                />
+                tools:listitem="@layout/item_videos" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
@@ -118,12 +114,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_media_play"
         android:backgroundTint="@color/red_lite"
+        android:contentDescription="@string/fab"
+        android:src="@android:drawable/ic_media_play"
         android:tint="@color/white"
         app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end"
-        android:contentDescription="@string/fab" />
+        app:layout_anchorGravity="bottom|end" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

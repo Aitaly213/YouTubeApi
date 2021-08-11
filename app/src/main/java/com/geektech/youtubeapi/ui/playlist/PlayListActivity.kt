@@ -70,8 +70,8 @@ class PlayListActivity : BaseActivity(R.layout.activity_main) {
     private fun clickListener(id: String, title: String, itemCount: Int) {
         val intent = Intent(this, DetailPlayListActivity::class.java)
         intent.putExtra("key_id", id)
-        intent.putExtra("key_title",title)
-        intent.putExtra("key_item_count",itemCount)
+        intent.putExtra("key_title", title)
+        intent.putExtra("key_item_count", itemCount)
         startActivity(intent)
     }
 

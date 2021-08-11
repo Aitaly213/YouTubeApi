@@ -24,15 +24,16 @@ class Repository(private val apiService: ApiService) {
         )
     }
 
-    fun fetchYoutubeApiVideo(id: String): LiveData<Resource<PlayListDetail?>> = liveData(Dispatchers.IO) {
+    fun fetchYoutubeApiVideo(id: String): LiveData<Resource<PlayListDetail?>> =
+        liveData(Dispatchers.IO) {
 
-        emit(Resource.loading(null))
+            emit(Resource.loading(null))
 
-        val response = apiService.getVideoListFromPlaylist(Constant.PART, id, API_KEY, 10)
-        emit(
-            if (response.isSuccessful) Resource.success(response.body(), response.code())
-            else Resource.error(response.message(), response.body(), response.code())
-        )
-    }
+            val response = apiService.getVideoListFromPlaylist(Constant.PART, id, API_KEY, 10)
+            emit(
+                if (response.isSuccessful) Resource.success(response.body(), response.code())
+                else Resource.error(response.message(), response.body(), response.code())
+            )
+        }
 
 }

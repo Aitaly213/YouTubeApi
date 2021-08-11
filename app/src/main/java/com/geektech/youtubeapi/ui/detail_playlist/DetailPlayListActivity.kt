@@ -77,7 +77,7 @@ class DetailPlayListActivity : BaseActivity(R.layout.activity_detail_play_list) 
 
         tv_detail_playlist_title.text = title
 //        tv_detail_playlist_subtitle.text = description
-        tv_video_series.text = "${itemCount}  ${getString(R.string.video_series)}"
+        tv_video_series.text = "$itemCount  ${getString(R.string.video_series)}"
     }
 
 

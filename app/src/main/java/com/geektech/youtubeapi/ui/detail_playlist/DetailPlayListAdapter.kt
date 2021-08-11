@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.geektech.youtubeapi.R
 import com.geektech.youtubeapi.model.Item
-import com.geektech.youtubeapi.model.Items
 import com.geektech.youtubeapi.utils.Utils.Companion.loadImage
 import kotlinx.android.synthetic.main.item_videos.view.*
 
-class DetailPlayListAdapter(private val clickListener: (item: String) -> Unit) : RecyclerView.Adapter<DetailPlayListAdapter.ViewHolder>() {
+class DetailPlayListAdapter(private val clickListener: (item: String) -> Unit) :
+    RecyclerView.Adapter<DetailPlayListAdapter.ViewHolder>() {
 
     private var list: List<Item> = listOf()
 
@@ -43,7 +43,10 @@ class DetailPlayListAdapter(private val clickListener: (item: String) -> Unit) :
 
         fun onBind(get: Item) {
 
-            itemView.iv_item_video.loadImage(itemView.iv_item_video.context, get.snippet.thumbnails.medium.url)
+            itemView.iv_item_video.loadImage(
+                itemView.iv_item_video.context,
+                get.snippet.thumbnails.medium.url
+            )
             itemView.tv_vid_item_title.text = get.snippet.title
 
         }
